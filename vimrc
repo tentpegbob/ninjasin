@@ -13,8 +13,8 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-" plugin from http://vim-scripts.org/vim/scripts.html
+Plugin 'Valloric/YouCompleteMe'
+" plugin from https://github.com/Valloric/YouCompleteMe#full-installation-guide
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -32,6 +32,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 "" General
+set encoding=utf-8
 set number        " Show line numbers
 set linebreak     " Break lines at word (requires Wrap lines)
 set showbreak=+++	" Wrap-broken line prefix

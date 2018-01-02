@@ -1,5 +1,5 @@
 /L20"Dockerfile" Line Comment = #  Escape Char = \ String Chars = "' File Names = Dockerfile
-/Delimiters = ~!@$%^*()+=/\[]{}:;"<>'�` ,   .?
+/Delimiters = ~!@$%^*()+=/\[]{}:;"<>'` ,   .?
 /Indent Strings = "{" "("
 /Unindent Strings = "}" ")"
 /Function String = "%[a-zA-Z_]"

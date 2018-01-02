@@ -57,7 +57,7 @@ set shiftwidth=4	 " Number of auto-indent spaces
 set smartindent	  " Enable smart-indent
 set smarttab	     " Enable smart-tabs
 set softtabstop=4	" Number of spaces per Tab
-set list listchars=tab:\ \ ,trail:·
+set list listchars=trail:.
 set linebreak
 set showbreak=+++
  

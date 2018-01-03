@@ -1,3 +1,12 @@
+" In order for this file to be useful you have to complete installation:
+" apt-get upgrade && apt-get update && \
+" apt-get install -y vim git build-essential cmake wget python-dev python3-dev clang
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+" wget https://raw.githubusercontent.com/tentpegbob/ninjasin/master/vimrc -O ~/.vimrc
+" vim +PluginInstall +qall
+" cd ~/.vim/bundle/YouCompleteMe/; ./install.py --clang-completer;
+" mkdir ~/.vim/bundle/YouCompleteMe/ycm_build; cd ~/.vim/bundle/YouCompleteMe/ycm_build; cmake -G "Unix Makefiles" . ~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp; cmake --build . --target ycm_core --config Release
+
 set nocompatible              " be iMproved, required
 filetype off                  " required
 

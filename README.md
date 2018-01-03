@@ -9,11 +9,13 @@
 ```docker build --squash -t developer .```
 
 ### Run the Docker Container and Your Program
-ASLR ON (and no gdb support): docker run -d -p 9999:9999 developer
-ASLR OFF (and gdb support): docker run -d -p 9999:9999 --privileged developer
+ASLR ON (and no gdb support): docker run -d -p 9999:9999 developer  
+ASLR OFF (and gdb support): docker run -d -p 9999:9999 --privileged developer  
 
 ### Connect to the Docker Application
-```nc localhost 9999``` or your favorite terminal application. Note* You may need to replace localhost with the port for your docker instance.
+```nc localhost 9999``` or your favorite terminal application.  
+Note* You may need to replace localhost with the port for your docker instance.
+
 #### Here are the steps to find your docker container's IP address:
  * ```docker ps``` which should results in something that looks like:
 ```

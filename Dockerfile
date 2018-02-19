@@ -14,16 +14,17 @@ LABEL Version="1.0"
 EXPOSE 9999
 
 #In docker 1.10 and higher only RUN, COPY, and ADD create additional layers
-RUN apt-get upgrade && apt-get update && \
-apt-get install -y vim git build-essential cmake wget python-dev python3-dev clang gdb python-pip
+RUN apt-get upgrade && apt-get update
+RUN apt-get install -y build-essential cmake python-dev python3-dev clang gdb python-pip python3-pip vim git
+#RUN apt-get install -y wget valgrind strace ltrace socat
 
 #Uncomment RUN lines for 32-bit support packages
 #RUN dpkg --add-architecture i386
-#RUN apt-get update; apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 multiarch-support
+#RUN apt-get update; apt-get install -y libc6:i386 libncurses5:i386 libstdc++6:i386 multiarch-support g++-multilib
 
-RUN apt-get install -y socat
-
-RUN wget https://raw.githubusercontent.com/tentpegbob/bearded-cyril/master/default-vim-cfg -O ~/.vimrc
+# capstone doesn't install quite right in docker, so we will have to manually link it via
+RUN pip3 install -U pip3; pip3 install capstone pwntools ropgadget
+RUN ln -s `find /usr -iname 'libcapstone*'` /usr/local/lib/python3.5/dist-packages/capstone/libcapstone.so
 
 RUN groupadd -r usr && useradd -d /home/usr -r -g usr usr
 COPY ./easy_overflow.c /tmp/easy_overflow.c

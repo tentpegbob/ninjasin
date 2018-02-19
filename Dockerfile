@@ -27,8 +27,8 @@ RUN pip3 install -U pip3; pip3 install capstone pwntools ropgadget
 RUN ln -s `find /usr -iname 'libcapstone*'` /usr/local/lib/python3.5/dist-packages/capstone/libcapstone.so
 
 RUN groupadd -r usr && useradd -d /home/usr -r -g usr usr
-COPY ./easy_overflow.c /tmp/easy_overflow.c
-RUN cd /tmp; gcc easy_overflow.c -o file; chmod +x file; mkdir /home/usr; mv file /home/usr/file
+COPY ./buffer_overflow.c /tmp/buffer_overflow.c
+RUN cd /tmp; gcc buffer_overflow.c -o file; chmod +x file; mkdir /home/usr; mv file /home/usr/file
 
 #CMD is run after the container has been created versus RUN is done when the container is created
 CMD ["echo", "0 > /proc/sys/kernel/randomize_va_space"]

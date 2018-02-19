@@ -16,7 +16,7 @@ EXPOSE 9999
 #In docker 1.10 and higher only RUN, COPY, and ADD create additional layers
 RUN apt-get upgrade && apt-get update
 RUN apt-get install -y build-essential cmake python-dev python3-dev clang gdb python-pip python3-pip vim git
-#RUN apt-get install -y wget valgrind strace ltrace socat
+RUN apt-get install -y wget valgrind strace ltrace socat
 
 #Uncomment RUN lines for 32-bit support packages
 #RUN dpkg --add-architecture i386
